@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link rel="hub" href="https://pubsubhubbub.appspot.com"/>
+  <title>The Blog of {{ site.owner.name }}</title>
+  <link href="{{ site.url }}{{ site.baseurl }}"/>
+  <link type="application/atom+xml" rel="self" href="{{ site.url }}{{ site.baseurl }}feed.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}{{ site.baseurl }}</id>
+  <author>
+    <name>{{ site.owner.name }}</name>
+    <uri>{{ site.owner.contact }}</uri>
+  </author>
+  {% for post in site.categories.articles limit:50 offset:0 %}
+  <entry>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <link type="text/html" rel="alternate" href="{{ site.url }}{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>{{ post.author }}</name>
+      <uri>mailto:{{ post.author_email }}</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>

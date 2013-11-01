@@ -1,0 +1,21 @@
+---
+layout: default
+nav:
+- title: Who we help
+  href: 'pitch/'
+- title: How it works
+  href: 'solution/'
+- title: Tools & instruments
+  href: 'tools/'
+---
+<nav>
+  <a href="{{ site.baseurl }}">Menu</a>
+  <a href="{{ site.baseurl }}">Cofounders.sg</a>
+  <a href="{{ site.owner.contact }}">Contact us</a>
+  <ul>
+    {% for link in page.nav %}
+    <li><a href="{{ site.baseurl }}{{ link.href }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+{{content}}

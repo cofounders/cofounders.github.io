@@ -1,0 +1,23 @@
+body > * {
+  margin: auto;
+  max-width: 700px;
+}
+body > header {
+  margin: 5em auto 5em auto;
+}
+body > ol {
+  list-style-position: inside;
+}
+body > ol > li > i {
+  white-space: nowrap;
+}
+body > article > header > aside {
+  font-style: italic;
+}
+body > aside {
+  margin-top: 5em;
+}
+body > footer {
+  font-style: italic;
+  margin: 3em auto 1em auto;
+}
