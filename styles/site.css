@@ -76,6 +76,7 @@ body > section > article {
   display: flex;
   -webkit-flex-flow: column;
   flex-flow: column;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
 #intro > article {
@@ -86,6 +87,7 @@ body > section > article {
   display: flex;
   -webkit-flex-flow: column;
   flex-flow: column;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
 }
 #intro > article > * {
