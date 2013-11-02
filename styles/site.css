@@ -44,17 +44,14 @@
 /* Site structure
  */
 
-html {
-  height: 100%;
-}
-
+html,
 body {
   margin: 0;
   height: 100%;
 }
 
 body > section > article {
-  margin: auto;
+  margin: 0 auto;
   max-width: 1024px;
 }
 
@@ -75,15 +72,33 @@ body > section > article {
   background-position: top center;
   background-attachment: fixed;
   min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  justify-content: flex-start;
 }
-
+#intro > article {
+  flex: auto;
+  min-height: 300px;
+  max-height: 600px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  justify-content: space-around;
+}
+#intro > article > * {
+  -webkit-flex: none;
+  flex: none;
+}
 #intro h1 {
   font-family: 'League Gothic', sans-serif;
   text-transform: uppercase;
   font-size: 120px;
   font-weight: normal;
   margin: 0;
-  padding: 60px 0 0 0;
+  padding: 0;
   text-align: center;
   color: #222222;
 }
@@ -120,7 +135,7 @@ body > section > article {
   line-height: 1.2;
   color: #222222;
   text-align: center;
-  margin: 48px 0 0 0;
+  margin: 0;
 }
 #intro .tagline .line {
   white-space: nowrap;
@@ -133,7 +148,7 @@ body > section > article {
 #intro .contact {
   width: 50%;
   text-align: center;
-  margin: 48px 0 0 0;
+  margin: 10px 0;
 }
 #intro .contact a {
   position: relative;
@@ -183,12 +198,10 @@ body > section > article {
 
 @media (max-width: 768px) {
   #intro {
-    background-position: 70% 0%;
     background-image: none;
   }
   #intro h1 {
     font-size: 70px;
-    padding: 30px 0 0 0;
   }
   #intro ol > li {
     font-size: 16px;
@@ -199,10 +212,8 @@ body > section > article {
   }
   #intro .tagline {
     font-size: 36px;
-    margin: 36px 0 0 0;
   }
   #intro .contact {
-    margin: 36px 0 0 0;
     width: 100%;
   }
 }
