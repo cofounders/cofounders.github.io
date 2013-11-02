@@ -80,6 +80,7 @@ body > section > article {
   justify-content: flex-start;
 }
 #intro > article {
+  -webkit-flex: auto;
   flex: auto;
   min-height: 300px;
   max-height: 600px;
