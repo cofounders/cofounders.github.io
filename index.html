@@ -1,23 +1,30 @@
 ---
 layout: menu
 ---
-<article>
-  <h1>Cofounders.sg</h1>
-  <ol>
-    <li>Think big</li>
-    <li>Start small</li>
-    <li>Move fast</li>
-  </ol>
-  <p>Bringing together the <em>fittest teams</em> to <em>grow startups</em> for <em>fun & profit</em>.</p>
-  <p>
-    <a href="{{ site.owner.contact }}">
-      <span>Get in touch</span>
-      <span>{{ site.owner.contact | remove_first: 'mailto:' }}</span>
-    </a>
-  </p>
-</article>
+<section id="intro">
+  <article>
+    <h1>C<span>o</span>founders.sg</h1>
+    <ol>
+      <li>Think big</li>
+      <li>Start small</li>
+      <li>Move fast</li>
+    </ol>
+    <p class="tagline">
+      <span class="line">Bringing together</span>
+      <span class="line">the <em>fittest teams</em></span>
+      <span class="line">to <em>grow startups</em></span>
+      <span class="line">for <em>fun & profit</em>.</span>
+    </p>
+    <p class="contact">
+      <a href="{{ site.owner.contact }}">
+        <span class="cta">Get in touch</span>
+        <span class="address">{{ site.owner.contact | remove_first: 'mailto:' }}</span>
+      </a>
+    </p>
+  </article>
+</section>
 
-<article>
+<article hidden>
   <h1>Who we help</h1>
 
   <a href="{{ site.baseurl }}pitch/#hackers">
@@ -50,7 +57,7 @@ layout: menu
   </a>
 </article>
 
-<article>
+<article hidden>
   <h1>The Problem</h1>
   <p><q>I have a great idea. Now I just need a {tech|design} cofounder.</q></p>
   <ul>
@@ -72,13 +79,13 @@ layout: menu
   </ul>
 </article>
 
-<article>
+<article hidden>
   <h1>The Solution</h1>
   <p>Cofounders enables freelancers to work with startups by balancing cash & equity as compensation.</p>
   <a href="{{ site.baseurl }}solution/">How does it work?</a>
 </article>
 
-<article>
+<article hidden>
   <h1>Tools & instruments</h1>
 
   <a href="{{ site.baseurl }}tools/#design">
@@ -100,6 +107,6 @@ layout: menu
   </a>
 </article>
 
-<article>
+<article hidden>
   <h1>Our work</h1>
 </article>

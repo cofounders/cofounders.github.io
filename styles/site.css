@@ -1,23 +1,206 @@
-body > * {
+@charset 'utf-8';
+
+/* Third party fonts
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Crimson+Text:400,700italic,600italic);
+
+/* Cofounders logo font with custom glyph
+ */
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url('../fonts/League_Gothic-webfont.eot');
+  src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/League_Gothic-webfont.woff') format('woff'),
+    url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+    url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'League Gothic CFSG';
+  src: url('../fonts/LeagueGothic-CFSG.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font icons
+ */
+
+@font-face {
+  font-family: 'cfsg-icon-fonts';
+  src: url('../fonts/cfsg-icon-fonts.eot');
+  src: url('../fonts/cfsg-icon-fonts.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cfsg-icon-fonts.ttf') format('truetype'),
+    url('../fonts/cfsg-icon-fonts.svg#cfsg-icon-fonts') format('svg'),
+    url('../fonts/cfsg-icon-fonts.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Site structure
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body > section > article {
   margin: auto;
-  max-width: 700px;
+  max-width: 1024px;
 }
-body > header {
-  margin: 5em auto 5em auto;
+
+@media (max-width: 768px) {
+  body > section > article {
+    max-width: 100%;
+  }
 }
-body > ol {
-  list-style-position: inside;
+
+/* Page: Home
+ * Screen: Intro
+ */
+
+#intro {
+  background-image: url('../images/bg-intro.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  min-height: 100%;
 }
-body > ol > li > i {
+
+#intro h1 {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-size: 120px;
+  font-weight: normal;
+  margin: 0;
+  padding: 60px 0 0 0;
+  text-align: center;
+  color: #222222;
+}
+#intro h1 > span {
+  font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
+  text-transform: lowercase;
+}
+#intro ol {
+  list-style-type: none;
+  display: block;
+  margin: -10px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+#intro ol > li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #231f20;
+}
+#intro ol > li:before,
+#intro ol > li:last-child:after {
+  display: inline-block;
+  content: '\2022';
+  padding: 0 5px 0 2px;
+}
+#intro .tagline {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #222222;
+  text-align: center;
+  margin: 48px 0 0 0;
+}
+#intro .tagline .line {
   white-space: nowrap;
 }
-body > article > header > aside {
+#intro .tagline em {
+  color: #d87e12;
+  font-weight: 700;
   font-style: italic;
 }
-body > aside {
-  margin-top: 5em;
+#intro .contact {
+  width: 50%;
+  text-align: center;
+  margin: 48px 0 0 0;
 }
-body > footer {
+#intro .contact a {
+  position: relative;
+  display: inline-block;
+  background-color: #74448e;
+  box-sizing: border-box;
+  height: 80px;
+  padding: 8px 30px 0 95px;
+  border-radius: 40px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#intro .contact a:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'cfsg-icon-fonts';
+  font-size: 30px;
+  content: 'e';
+  color: #fff;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px 0 0 40px;
+  background-color: #512f63;
+  line-height: 80px;
+  text-align: right;
+  padding: 0 15px 0 0;
+  box-sizing: border-box;
+}
+#intro .contact a .cta {
+  display: block;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 -10px 0;
+}
+#intro .contact a .address {
+  display: block;
+  color: #c2b2cc;
+  font-family: 'Crimson Text', serif;
+  font-size: 22px;
+  font-weight: 600;
   font-style: italic;
-  margin: 3em auto 1em auto;
+}
+
+@media (max-width: 768px) {
+  #intro {
+    background-position: 70% 0%;
+  }
+  #intro h1 {
+    font-size: 70px;
+    padding: 30px 0 0 0;
+  }
+  #intro ol > li {
+    font-size: 16px;
+  }
+  #intro ol > li:first-child:before,
+  #intro ol > li:last-child:after {
+    display: none;
+  }
+  #intro .tagline {
+    font-size: 36px;
+    margin: 36px 0 0 0;
+  }
+  #intro .contact {
+    margin: 36px 0 0 0;
+    width: 100%;
+  }
 }
