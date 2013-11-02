@@ -70,6 +70,7 @@ body > section > article {
 
 #intro {
   background-image: url('../images/bg-intro.jpg');
+  background-color: #f6e9d8;
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
@@ -183,6 +184,7 @@ body > section > article {
 @media (max-width: 768px) {
   #intro {
     background-position: 70% 0%;
+    background-image: none;
   }
   #intro h1 {
     font-size: 70px;
