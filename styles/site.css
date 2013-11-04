@@ -554,3 +554,9 @@ a.details .info {
 #solution a:before {
   content: 'w';
 }
+
+@media (max-width: 768px) {
+  #solution > article {
+    max-height: none;
+  }
+}
