@@ -18,9 +18,9 @@ layout: menu
       <span class="line">for <em>fun & profit</em>.</span>
     </p>
     <p class="contact">
-      <a href="{{ site.owner.contact }}">
+      <a class="details" href="{{ site.owner.contact }}">
         <span class="cta">Get in touch</span>
-        <span class="address">{{ site.owner.contact | remove_first: 'mailto:' }}</span>
+        <span class="info">{{ site.owner.contact | remove_first: 'mailto:' }}</span>
       </a>
     </p>
   </article>
@@ -91,6 +91,21 @@ layout: menu
   </article>
 </section>
 
+<section id="solution">
+  <article>
+    <header>
+      <h1>The Solution</h1>
+    </header>
+    <p class="description">Cofounders enables freelancers to work with startups by balancing <em>cash & equity</em> as compensation.</p>
+    <p class="link">
+      <a class="details" href="{{ site.baseurl }}solution/">
+        <span class="cta">The nitty gritty</span>
+        <span class="info">How does this work?</span>
+      </a>
+    </p>
+  </article>
+</section>
+
 <article hidden>
   <h1>The Problem</h1>
   <p><q>I have a great idea. Now I just need a {tech|design} cofounder.</q></p>
@@ -111,12 +126,6 @@ layout: menu
       <p>Legal hassle and cost of sharing equity</p>
     </li>
   </ul>
-</article>
-
-<article hidden>
-  <h1>The Solution</h1>
-  <p>Cofounders enables freelancers to work with startups by balancing cash & equity as compensation.</p>
-  <a href="{{ site.baseurl }}solution/">How does it work?</a>
 </article>
 
 <article hidden>

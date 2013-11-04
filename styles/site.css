@@ -116,6 +116,54 @@ h2 {
   font-size: 28px;
 }
 
+/* Component: Details button
+ */
+
+a.details {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 80px;
+  padding: 8px 30px 0 95px;
+  border-radius: 40px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+}
+a.details:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'cfsg-icon-fonts';
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px 0 0 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 80px;
+  text-align: right;
+  padding: 0 15px 0 0;
+  box-sizing: border-box;
+}
+a.details .cta {
+  display: block;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 -10px 0;
+}
+a.details .info {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Crimson Text', serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+}
+
 /* Page: Home
  * Screen: Intro
  */
@@ -175,49 +223,10 @@ h2 {
   margin: 10px 0;
 }
 #intro .contact a {
-  position: relative;
-  display: inline-block;
   background-color: #74448e;
-  box-sizing: border-box;
-  height: 80px;
-  padding: 8px 30px 0 95px;
-  border-radius: 40px;
-  text-decoration: none;
-  white-space: nowrap;
 }
 #intro .contact a:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-family: 'cfsg-icon-fonts';
-  font-size: 30px;
   content: 'e';
-  color: #fff;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  border-radius: 40px 0 0 40px;
-  background-color: rgba(0, 0, 0, 0.3);
-  line-height: 80px;
-  text-align: right;
-  padding: 0 15px 0 0;
-  box-sizing: border-box;
-}
-#intro .contact a .cta {
-  display: block;
-  color: #fff;
-  font-family: 'Roboto Slab', serif;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 0 0 -10px 0;
-}
-#intro .contact a .address {
-  display: block;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: 'Crimson Text', serif;
-  font-size: 22px;
-  font-weight: 600;
-  font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -449,29 +458,31 @@ h2 {
 }
 #challenge .toggle > * {
   display: block;
+}
+#challenge .toggle > :first-child {
   -webkit-animation: swap-role 10s ease infinite;
   -moz-animation: swap-role 10s ease infinite;
   animation: swap-role 20s ease infinite;
 }
 @-webkit-keyframes swap-role {
-  0% { -webkit-transform: translateY(0); }
-  5% { -webkit-transform: translateY(-48px); }
-  55% { -webkit-transform: translateY(-48px); }
-  60% { -webkit-transform: translateY(0); }
+  0% { margin-top: 0; }
+  5% { margin-top: -48px; }
+  55% { margin-top: -48px; }
+  60% { margin-top: 0; }
 }
 @-moz-keyframes swap-role {
-  0% { transform: translateY(0); }
-  5% { transform: translateY(-48px); }
-  55% { transform: translateY(-48px); }
-  60% { transform: translateY(0); }
+  0% { margin-top: 0; }
+  5% { margin-top: -48px; }
+  55% { margin-top: -48px; }
+  60% { margin-top: 0; }
 }
 @keyframes swap-role {
-  0% { transform: translateY(0); }
-  5% { transform: translateY(-48px); }
-  55% { transform: translateY(-48px); }
-  60% { transform: translateY(0); }
+  0% { margin-top: 0; }
+  5% { margin-top: -48px; }
+  55% { margin-top: -48px; }
+  60% { margin-top: 0; }
 }
-  
+
 @media (max-width: 768px) {
   #challenge > article > header > h1 {
     margin: 0;
@@ -482,4 +493,64 @@ h2 {
   #challenge > article {
     max-height: none;
   }
+}
+
+/* Page: Home
+ * Screen: Solution
+ */
+
+#solution {
+  position: relative;
+  background-image: url('../images/bg_product.jpg');
+  background-color: #f6e9d8;
+}
+#solution:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(116, 68, 142, 0.9);
+}
+#solution > article {
+  max-height: 750px;
+  z-index: 1;
+}
+#solution h1 {
+  color: #fff;
+}
+#solution .description {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+  margin: 0 20px;
+}
+#solution .description:before {
+  display: block;
+  content: '';
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  background-image: url('../images/solution.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: auto;
+}
+#solution .link {
+  text-align: center;
+  margin: 0;
+}
+#solution .description em {
+  font-weight: 700;
+}
+#solution a {
+  background-color: #d87e12;
+}
+#solution a:before {
+  content: 'w';
 }
