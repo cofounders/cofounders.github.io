@@ -180,7 +180,7 @@ label.link {
   cursor: pointer;
   display: inline-block;
   padding: 8px 35px;
-  height: 45px;
+  min-height: 45px;
   border-style: solid;
   border-width: 2px;
   border-radius: 22.5px;
@@ -564,6 +564,7 @@ label.link {
   background-size: contain;
   background-position: center center;
   margin: auto;
+  opacity: 0.5;
 }
 #solution .link {
   text-align: center;
@@ -607,42 +608,29 @@ label.link {
   padding: 0;
   margin: 10px 0;
 }
-#instruments > article > ul > li {
+#instruments .instrument {
   display: -webkit-flex;
   display: flex;
-}
-#instruments .instrument {
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: block;
   width: 100%;
   height: 100%;
   margin: 40px 0 40px 0;
   text-decoration: none;
   position: relative;
 }
-#instruments .instrument:before {
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  content: '';
-  display: block;
-  width: 200px;
-  height: 200px;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 0 30px;
-  box-sizing: border-box;
-  background-origin: content-box;
+#instruments .instrument > div {
+  flex: 1 1 70%;
+  order: 2;
 }
-#instruments .instrument.design:before {
-  background-image: url('../images/tools-design.svg');
+#instruments .instrument > figure {
+  flex: auto;
+  flex: 1 1 30%;
+  max-width: 285px;
+  margin: 0;
+  padding: 25px 0 0 0;
 }
-#instruments .instrument.code:before {
-  background-image: url('../images/tools-tech.svg');
-}
-#instruments .instrument.legal:before {
-  background-image: url('../images/tools-legal.svg');
+#instruments .instrument > figure > img {
+  border: none;
+  width: 70%;
 }
 #instruments .instrument h2 {
   font-size: 36px;
@@ -665,11 +653,15 @@ label.link {
   color: #888;
   margin: -8px 0 20px 0;
 }
-#instruments .instrument > p {
+#instruments .instrument div > p {
   color: #222;
   font-family: 'Roboto Slab', serif;
   font-size: 18px;
   font-weight: 400;
+}
+#instruments .instrument label.link {
+  min-width: 50%;
+  text-align: center;
 }
 #instruments .instrument.design label.link {
   color: #74448e;
