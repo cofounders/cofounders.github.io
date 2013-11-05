@@ -17,14 +17,23 @@
 <body>
   {{content}}
 
-  <article hidden>
-    <h1 id="contact">Let's talk</h1>
-
-    <p>Go on, say hello! We'd love to hear from you.</p>
-    <a href="{{ site.owner.contact }}">{{ site.owner.contact | remove_first: 'mailto:' }}</a>
-    <a href="{{ site.owner.facebook }}">Facebook</a>
-    <a href="{{ site.owner.github }}">GitHub</a>
-  </article>
+  <section id="contact">
+    <article>
+      <header>
+        <h1>Let's talk</h1>
+      </header>
+      <p class="message">Go on, say hello! We'd love to hear from you.</p>
+      <p class="email">
+        <a class="details" href="{{ site.owner.contact }}">
+          <span class="cta">{{ site.owner.contact | remove_first: 'mailto:' }}</span>
+        </a>
+      </p>
+      <p class="social">
+        <a class="facebook" href="{{ site.owner.facebook }}">Facebook</a>
+        <a class="github" href="{{ site.owner.github }}">GitHub</a>
+      </p>
+    </article>
+  </section>
 
   <footer hidden>
     Crafted by <a href="{{ site.owner.contact }}">{{ site.owner.name }}</a>,
