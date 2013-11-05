@@ -621,11 +621,13 @@ label.link {
   position: relative;
 }
 #instruments .instrument > div {
+  -webkit-flex: 1 1 70%;
   flex: 1 1 70%;
+  -webkit-order: 2;
   order: 2;
 }
 #instruments .instrument > figure {
-  flex: auto;
+  -webkit-flex: 1 1 30%;
   flex: 1 1 30%;
   max-width: 285px;
   margin: 0;
