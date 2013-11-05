@@ -38,7 +38,6 @@
     url('../fonts/cfsg-icon-fonts.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 /* Site structure
@@ -75,7 +74,9 @@ body > section > article {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-
+body > section > article > header > h1 {
+  margin: 20px 0 0 0;
+}
 body > section > article > * {
   -webkit-flex: none;
   flex: none;
@@ -102,6 +103,7 @@ h2 {
   padding: 0;
   text-align: center;
   color: #222222;
+  line-height: 1;
 }
 h1 > .cfsg {
   font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
@@ -164,11 +166,27 @@ a.details .info {
 
 @media (max-width: 768px) {
   a.details {
-    padding: 8px 30px 0 30px;
+    padding-left: 30px;
   }
   a.details:before {
     display: none;
   }
+}
+
+/* Component: Slide titles
+ */
+
+label.link {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 35px;
+  height: 45px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22.5px;
+  font-size: 18px;
+  font-family: 'Roboto Slab';
+  box-sizing: border-box;
 }
 
 /* Page: Home
@@ -184,6 +202,7 @@ a.details .info {
 }
 #intro header > h1 {
   font-size: 120px;
+  margin: 0;
 }
 #intro ol {
   list-style-type: none;
@@ -252,9 +271,16 @@ a.details .info {
   }
   #intro .tagline {
     font-size: 36px;
+    margin: 0 10px;
   }
   #intro .contact {
     width: 100%;
+  }
+  #intro a.details {
+    padding-left: 95px;
+  }
+  #intro a.details:before {
+    display: inline-block;
   }
 }
 
@@ -285,7 +311,7 @@ a.details .info {
   -webkit-display: flex;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin: 0 0 40px 0;
   text-align: center;
 }
 #pitch > article > ul > li {
@@ -365,41 +391,28 @@ a.details .info {
 #pitch .audience p {
   display: block;
 }
-#pitch .audience p > label {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 35px;
-  height: 45px;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 22.5px;
-  border-box: border-box;
-  font-size: 18px;
-  font-family: 'Roboto Slab';
-  box-sizing: border-box;
-}
-#pitch .audience.hackers p > label {
+#pitch .audience.hackers label.link {
   color: #0089c2;
   border-color: #0089c2;
 }
-#pitch .audience.entrepreneurs p > label {
+#pitch .audience.entrepreneurs label.link {
   color: #e88f24;
   border-color: #e88f24;
 }
-#pitch .audience.investors p > label {
+#pitch .audience.investors label.link {
   color: #8b2022;
   border-color: #8b2022;
 }
-#pitch .audience:hover p > label {
+#pitch .audience:hover label.link {
   color: #fff;
 }
-#pitch .audience.hackers:hover p > label {
+#pitch .audience.hackers:hover label.link {
   background-color: #0089c2;
 }
-#pitch .audience.entrepreneurs:hover p > label {
+#pitch .audience.entrepreneurs:hover label.link {
   background-color: #e88f24;
 }
-#pitch .audience.investors:hover p > label {
+#pitch .audience.investors:hover label.link {
   background-color: #8b2022;
 }
 
@@ -418,6 +431,9 @@ a.details .info {
   #pitch .audience:before {
     height: 150px;
   }
+  #pitch .audience > ol {
+    min-height: 0;
+  }
 }
 
 /* Page: Home
@@ -429,7 +445,7 @@ a.details .info {
   background-color: #f6e9d8;
 }
 #challenge > article > header > h1 {
-  margin: 0 20px 0 25%;
+  margin-left: 25%;
 }
 #challenge > article {
   max-height: 350px;
@@ -492,7 +508,7 @@ a.details .info {
 
 @media (max-width: 768px) {
   #challenge > article > header > h1 {
-    margin: 0;
+    margin-left: 0;
   }
   #challenge q {
     margin: 0 20px;
@@ -535,7 +551,7 @@ a.details .info {
   line-height: 48px;
   color: #fff;
   text-align: center;
-  margin: 0 20px;
+  margin: 0;
 }
 #solution .description:before {
   display: block;
@@ -566,5 +582,125 @@ a.details .info {
 @media (max-width: 768px) {
   #solution > article {
     max-height: none;
+  }
+  #solution .description {
+    margin: 0 10px;
+  }
+}
+
+/* Page: Home
+ * Screen: Instruments
+ */
+
+#instruments {
+}
+#instruments > article > p {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #888;
+  margin: 0;
+}
+#instruments > article > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+#instruments > article > ul > li {
+  display: -webkit-flex;
+  display: flex;
+}
+#instruments .instrument {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 40px 0 40px 0;
+  text-decoration: none;
+  position: relative;
+}
+#instruments .instrument:before {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  content: '';
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background-origin: content-box;
+}
+#instruments .instrument.design:before {
+  background-image: url('../images/tools-design.svg');
+}
+#instruments .instrument.code:before {
+  background-image: url('../images/tools-tech.svg');
+}
+#instruments .instrument.legal:before {
+  background-image: url('../images/tools-legal.svg');
+}
+#instruments .instrument h2 {
+  font-size: 36px;
+  text-align: left;
+}
+#instruments .instrument.design h2 {
+  color: #74448e;
+}
+#instruments .instrument.code h2 {
+  color: #d87e12;
+}
+#instruments .instrument.legal h2 {
+  color: #0089c2;
+}
+#instruments .instrument header > p {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 24px;
+  color: #888;
+  margin: -8px 0 20px 0;
+}
+#instruments .instrument > p {
+  color: #222;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+#instruments .instrument.design label.link {
+  color: #74448e;
+  border-color: #74448e;
+}
+#instruments .instrument.code label.link {
+  color: #d87e12;
+  border-color: #d87e12;
+}
+#instruments .instrument.legal label.link {
+  color: #0089c2;
+  border-color: #0089c2;
+}
+#instruments .instrument:hover label.link {
+  color: #fff;
+}
+#instruments .instrument.design:hover label.link {
+  background-color: #74448e;
+}
+#instruments .instrument.code:hover label.link {
+  background-color: #d87e12;
+}
+#instruments .instrument.legal:hover label.link {
+  background-color: #0089c2;
+}
+
+@media (max-width: 768px) {
+  #instruments > article > p {
+    margin: 0 10px;
+  }
+  #instruments > article > ul {
+    margin: 10px 10px;
   }
 }

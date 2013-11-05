@@ -41,7 +41,7 @@ layout: menu
             <li>Spread your bets</li>
           </ol>
           <p>
-            <label>Find out how</label>
+            <label class="link">Find out how</label>
           </p>
         </a>
       </li>
@@ -54,7 +54,7 @@ layout: menu
             <li>Reduce overhead</li>
           </ol>
           <p>
-            <label>Find out how</label>
+            <label class="link">Find out how</label>
           </p>
         </a>
       </li>
@@ -66,7 +66,7 @@ layout: menu
             <li>Increased leverage</li>
           </ol>
           <p>
-            <label>Find out how</label>
+            <label class="link">Find out how</label>
           </p>
         </a>
       </li>
@@ -89,6 +89,27 @@ layout: menu
       cofounder&hellip;
     </q>
   </article>
+  <!--
+   <article>
+    <ul>
+      <li>
+        <p><b>Techies</b></p>
+        <p>Hard to value sweat equity</p>
+        <p>Too early stage to quit your day job</p>
+      </li>
+      <li>
+        <p><b>Entrepreneurs</b></p>
+        <p>Struggle to hire a strong tech team</p>
+        <p>Weak founding teams repel investors</p>
+      </li>
+      <li>
+        <p><b>Investors</b></p>
+        <p>Funding good teams is expensive</p>
+        <p>Legal hassle and cost of sharing equity</p>
+      </li>
+    </ul>
+  </article>
+  -->
 </section>
 
 <section id="solution">
@@ -106,50 +127,48 @@ layout: menu
   </article>
 </section>
 
-<article hidden>
-  <h1>The Problem</h1>
-  <p><q>I have a great idea. Now I just need a {tech|design} cofounder.</q></p>
-  <ul>
-    <li>
-      <p><b>Techies</b></p>
-      <p>Hard to value sweat equity</p>
-      <p>Too early stage to quit your day job</p>
-    </li>
-    <li>
-      <p><b>Entrepreneurs</b></p>
-      <p>Struggle to hire a strong tech team</p>
-      <p>Weak founding teams repel investors</p>
-    </li>
-    <li>
-      <p><b>Investors</b></p>
-      <p>Funding good teams is expensive</p>
-      <p>Legal hassle and cost of sharing equity</p>
-    </li>
-  </ul>
-</article>
-
-<article hidden>
-  <h1>Tools & instruments</h1>
-
-  <a href="{{ site.baseurl }}tools/#design">
-    <h2>Design process</h2>
-    <p>From idea to roadmap</p>
-    <label>Learn more</label>
-  </a>
-
-  <a href="{{ site.baseurl }}tools/#code">
-    <h2>Coding frameworks</h2>
-    <p>Jump start your tech</p>
-    <label>Learn more</label>
-  </a>
-
-  <a href="{{ site.baseurl }}tools/#legal">
-    <h2>Legal boilerplate</h2>
-    <p>Fine print that works</p>
-    <label>Learn more</label>
-  </a>
-</article>
-
-<article hidden>
-  <h1>Our work</h1>
-</article>
+<section id="instruments">
+  <article>
+    <header>
+      <h1>Our Instruments</h1>
+    </header>
+    <p>
+      <!-- Cofounders members are specialised in a wide range of programming languages and technology stacks. -->
+      Knowledge and skill transfer is essential to our work.
+      We love to share our processes and tools.
+      Even this very website is open source.
+    </p>
+    <ul>
+      <li>
+        <a class="instrument design" href="{{ site.baseurl }}tools/#design">
+          <header>
+            <h2>Product design process</h2>
+            <p>From idea to roadmap</p>
+          </header>
+          <p>Our methodology, called DryWall, takes you from product planning, to wireframes and user interfaces, to user acceptance testing.</p>
+          <label class="link">What is DryWall?</label>
+        </a>
+      </li>
+      <li>
+        <a class="instrument code" href="{{ site.baseurl }}tools/#code">
+          <header>
+            <h2>Coding frameworks</h2>
+            <p>Jump-start your technology</p>
+          </header>
+          <p>Leverage a stack that has been battle tested and proven to work. Free and open source software.</p>
+          <label class="link">Learn more</label>
+        </a>
+      </li>
+      <li>
+        <a class="instrument legal" href="{{ site.baseurl }}tools/#legal">
+          <header>
+            <h2>Legal boilerplate</h2>
+            <p>Fine print that works</p>
+          </header>
+          <p>Legal docs for hackers. Just fork and edit. These agreements are tuned for Singapore.</p>
+          <label class="link">Learn more</label>
+        </a>
+      </li>
+    </ul>
+  </article>
+</section>
