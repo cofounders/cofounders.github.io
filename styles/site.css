@@ -720,9 +720,11 @@ label.link {
 
 @media (max-width: 768px) and (orientation: portrait) {
   #instruments .instrument {
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
   #instruments .instrument > div {
+    -webkit-flex: none;
     flex: none;
   }
   #instruments .instrument,
@@ -737,6 +739,7 @@ label.link {
   }
   #instruments .instrument > figure {
     height: 100px;
+    -webkit-flex: none;
     flex: none;
     text-align: center;
     max-width: none;
