@@ -49,7 +49,6 @@ body {
   margin: 0;
   height: 100%;
 }
-
 body > section {
   background-repeat: no-repeat;
   background-position: top center;
@@ -62,7 +61,6 @@ body > section {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
-
 body > section > article {
   margin: 0 auto;
   width: 100%;
@@ -78,6 +76,11 @@ body > section > article {
   justify-content: space-around;
 }
 
+body > section > article > * {
+  -webkit-flex: none;
+  flex: none;
+}
+
 @media (max-width: 768px) {
   body > section > article {
     max-width: 100%;
@@ -85,11 +88,6 @@ body > section > article {
   body > section {
     background-image: none !important;
   }
-}
-
-body > section > article > * {
-  -webkit-flex: none;
-  flex: none;
 }
 
 /* Component: Slide titles
@@ -162,6 +160,15 @@ a.details .info {
   font-size: 22px;
   font-weight: 600;
   font-style: italic;
+}
+
+@media (max-width: 768px) {
+  a.details {
+    padding: 8px 30px 0 30px;
+  }
+  a.details:before {
+    display: none;
+  }
 }
 
 /* Page: Home
@@ -539,11 +546,12 @@ a.details .info {
   background-image: url('../images/solution.svg');
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center center;
   margin: auto;
 }
 #solution .link {
   text-align: center;
-  margin: 0;
+  margin: 40px 0;
 }
 #solution .description em {
   font-weight: 700;
