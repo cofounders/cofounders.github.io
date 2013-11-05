@@ -439,6 +439,22 @@ label.link {
   }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+  #pitch .audience {
+    position: relative;
+    padding-right: 200px;
+    box-sizing: border-box;
+  }
+  #pitch .audience:before {
+    position: absolute;
+    width: 210px;
+    top: 0;
+    right: 0px;
+    padding: 10px;
+    height: 100%;
+  }
+}
+
 /* Page: Home
  * Screen: Challenge
  */
