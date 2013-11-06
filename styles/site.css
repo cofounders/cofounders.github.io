@@ -805,6 +805,7 @@ label.link {
   height: 42px;
   position: relative;
   margin: 0 5px;
+  text-decoration: none;
 }
 #contact .social > a:after {
   position: absolute;
