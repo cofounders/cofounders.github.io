@@ -55,8 +55,8 @@ body > section {
   min-height: 100%;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: column;
-  flex-flow: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
@@ -69,8 +69,8 @@ body > section > article {
   min-height: 300px;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: column;
-  flex-flow: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
@@ -122,6 +122,8 @@ h2 {
 a.details {
   position: relative;
   display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 80px;
   padding: 8px 30px 0 95px;
@@ -145,6 +147,8 @@ a.details:before {
   line-height: 80px;
   text-align: right;
   padding: 0 15px 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 a.details .cta {
@@ -189,6 +193,8 @@ label.link {
   border-radius: 22.5px;
   font-size: 18px;
   font-family: 'Roboto Slab';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -337,6 +343,8 @@ label.link {
   background-position: center center;
   background-repeat: no-repeat;
   padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-origin: content-box;
 }
@@ -424,8 +432,8 @@ label.link {
     max-height: none;
   }
   #pitch > article > ul {
-    -webkit-flex-flow: column;
-    flex-flow: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
   #pitch > article > ul > li {
     -webkit-flex: none;
@@ -443,6 +451,8 @@ label.link {
   #pitch .audience {
     position: relative;
     padding-right: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   #pitch .audience:before {
@@ -494,35 +504,43 @@ label.link {
   color: #74448e;
   font-weight: 700;
   display: inline-block;
-  height: 52px;
+  height: 60px;
   margin: 0 5px -12px 5px;
   overflow: hidden;
+  vertical-align: top;
 }
 #challenge .toggle > * {
   display: block;
+  height: 60px;
 }
 #challenge .toggle > :first-child {
   -webkit-animation: swap-role 10s ease infinite;
   -moz-animation: swap-role 10s ease infinite;
-  animation: swap-role 20s ease infinite;
+  animation: swap-role 10s ease infinite;
 }
 @-webkit-keyframes swap-role {
-  0% { margin-top: 0; }
-  5% { margin-top: -48px; }
-  55% { margin-top: -48px; }
-  60% { margin-top: 0; }
+  45% { margin-top: 0; }
+  50% { margin-top: -60px; }
+  95% { margin-top: -60px; }
+  100% { margin-top: 0; }
+}
+@-webkit-keyframes swap-role-transform {
+  45% { margin-top: 0; }
+  50% { margin-top: -60px; }
+  95% { margin-top: -60px; }
+  100% { margin-top: 0; }
 }
 @-moz-keyframes swap-role {
-  0% { margin-top: 0; }
-  5% { margin-top: -48px; }
-  55% { margin-top: -48px; }
-  60% { margin-top: 0; }
+  45% { margin-top: 0; }
+  50% { margin-top: -60px; }
+  95% { margin-top: -60px; }
+  100% { margin-top: 0; }
 }
 @keyframes swap-role {
-  0% { margin-top: 0; }
-  5% { margin-top: -48px; }
-  55% { margin-top: -48px; }
-  60% { margin-top: 0; }
+  45% { margin-top: 0; }
+  50% { margin-top: -60px; }
+  95% { margin-top: -60px; }
+  100% { margin-top: 0; }
 }
 
 @media (max-width: 768px) {
@@ -673,6 +691,7 @@ label.link {
   font-size: 24px;
   color: #888;
   margin: -8px 0 20px 0;
+  line-height: 1.5;
 }
 #instruments .instrument div > p {
   color: #222;
