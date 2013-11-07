@@ -9,9 +9,9 @@ nav:
   href: 'tools/'
 ---
 <nav hidden>
-  <a href="{{ site.baseurl }}">Menu</a>
-  <a href="{{ site.baseurl }}">Cofounders.sg</a>
-  <a href="{{ site.owner.contact }}">Contact us</a>
+  <a href="{{ site.owner.website }}" class="home">Visit our homepage</a>
+  <a href="{{ site.baseurl }}" class="logo">C<span class="cfsg">o</span>founders.sg</a>
+  <a href="{{ site.owner.contact }}" class="contact">Contact us</a>
   <ul>
     {% for link in page.nav %}
     <li><a href="{{ site.baseurl }}{{ link.href }}">{{ link.title }}</a></li>
