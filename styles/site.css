@@ -917,3 +917,125 @@ label.link {
     flex-direction: column;
   }
 }
+
+/* Page: Pitch
+ * Screen: Who We Help
+ */
+
+#whowehelp {
+  background-image: url('../images/bg_ingenuity.jpg');
+  background-color: #f6e9d8;
+}
+#whowehelp > article {
+  max-height: 400px;
+}
+#whowehelp header > h1 {
+  font-size: 120px;
+  margin: 0;
+}
+#whowehelp p {
+  margin: 0 20px;
+  color: #222222;
+  line-height: 1;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #whowehelp > article {
+    max-height: none;
+  }
+}
+
+/* Page: Pitch
+ * Screen: Any of the content slides
+ */
+#techies,
+#entrepreneurs,
+#investors {
+  color: #fff;
+  position: relative;
+  background-image: url('../images/bg_ingenuity.jpg');
+  background-color: #f6e9d8;
+}
+#techies:after,
+#entrepreneurs:after,
+#investors:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#techies > article,
+#entrepreneurs > article,
+#investors > article {
+  z-index: 1;
+}
+#techies header > h1,
+#entrepreneurs header > h1,
+#investors header > h1 {
+  color: #fff;
+}
+#techies header > p,
+#entrepreneurs header > p,
+#investors header > p {
+  margin: 0;
+  color: #fff;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
+}
+#techies ul,
+#entrepreneurs ul,
+#investors ul {
+  margin: 0 20px;
+  padding: 0 0 0 20px;
+}
+#techies li,
+#entrepreneurs li,
+#investors li {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Page: Pitch
+ * Screen: Developers & Designers
+ */
+#techies {
+}
+#techies:after {
+  background-color: rgba(0, 137, 194, 0.9);
+}
+#techies > article {
+}
+
+/* Page: Pitch
+ * Screen: Entrepreneurs
+ */
+#entrepreneurs {
+}
+#entrepreneurs:after {
+  background-color: rgba(232, 143, 35, 0.9);
+}
+#entrepreneurs > article {
+}
+
+/* Page: Pitch
+ * Screen: Investors
+ */
+#investors {
+}
+#investors:after {
+  background-color: rgba(139, 32, 34, 0.9);
+}
+#investors > article {
+}
