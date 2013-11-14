@@ -1039,3 +1039,35 @@ label.link {
 }
 #investors > article {
 }
+
+/* Page: Solution
+ * Screen: The Nitty Gritty
+ */
+
+#nittygritty {
+  background-image: url('../images/bg_product.jpg');
+  background-color: #f6e9d8;
+}
+#nittygritty > article {
+  max-height: 400px;
+}
+#nittygritty header > h1 {
+  font-size: 120px;
+  margin: 0;
+}
+#nittygritty p {
+  margin: 0 20px;
+  color: #222222;
+  line-height: 1;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #nittygritty > article {
+    max-height: none;
+  }
+}
